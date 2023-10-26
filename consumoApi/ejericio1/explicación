@@ -1,0 +1,47 @@
+/*const API_URL = "https://jsonplaceholder.typicode.com/photos?_limit=10";
+
+// Define una función asincrónica llamada reload
+async function reload() {
+    // Realiza una solicitud fetch a la URL de la API y espera la respuesta
+    const res = await fetch(API_URL);
+    
+    // Convierte la respuesta a formato JSON y espera el resultado
+    const data = await res.json();
+
+    // Obtiene una referencia al elemento con el ID 'imageContainer' en el documento HTML
+    const imageContainer = document.getElementById('imageContainer');
+
+    // Limpia el contenido del contenedor de imágenes e información, eliminando cualquier contenido anterior
+    imageContainer.innerHTML = '';
+
+    // Itera sobre los elementos del array 'data' (las fotos de la API)
+    data.forEach((photo, index) => {
+        // Crea un elemento de imagen
+        const imgElement = document.createElement('img');
+        imgElement.src = photo.url; // Establece la fuente de la imagen
+        imgElement.width = 300; // Establece el ancho de la imagen
+        imgElement.alt = ''; // Establece un atributo 'alt' vacío (texto alternativo para la imagen)
+
+        // Crea un elemento div para mostrar la información de la imagen
+        const infoElement = document.createElement('div');
+        // Establece el contenido HTML del div con los detalles de la foto
+        infoElement.innerHTML = `
+            <p><strong>Título:</strong> ${photo.title}</p>
+            <p><strong>ID:</strong> ${photo.id}</p>
+        `;
+
+        // Agrega la imagen y la información al contenedor en la página web
+        imageContainer.appendChild(imgElement);
+        imageContainer.appendChild(infoElement);
+
+        // Agrega un salto de línea horizontal (<hr>) entre cada imagen e información
+        if (index < data.length - 1) {
+            const lineBreak = document.createElement('hr');
+            imageContainer.appendChild(lineBreak);
+        }
+    });
+}
+
+// Llama a la función 'reload' para cargar las imágenes y la información al cargar la página
+reload();
+*/
